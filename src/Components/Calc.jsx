@@ -39,12 +39,13 @@ export default function Calc() {
       }
     }
   
+    // Handles the calculator operators(+, -, =, *, /)
     const handleOperator = (e) => {
       if (e.target.value === "=") {
         handleCal()
         setSecondValue(0)
         setOperator(null)
-        console.log(operator, secondValue, displayNum)
+        // console.log(operator, secondValue, displayNum)
   
       }
       else {
@@ -54,11 +55,12 @@ export default function Calc() {
         if (operator !== null) {
           handleCal()
           setSecondValue(0)
-          console.log(operator, secondValue, displayNum)
+        //   console.log(operator, secondValue, displayNum)
         }
       }
     }
   
+    // Handles the main functionality of the calculator
     const handleCal = () => {
   
       if (operator === "+") {
@@ -72,11 +74,11 @@ export default function Calc() {
   
       } else if (operator === "/") {
         return setDisplayNum(`${Number(secondValue) / Number(displayNum)}`)
-  
       }
   
     }
   
+    // this resets the calculator
     const handleClear = () => {
       setDisplayNum("0")
       setOperator(null)
@@ -96,8 +98,6 @@ export default function Calc() {
               {displayNum}
             </div>
           </section>
-  
-  
   
           <section className='buttons'>
             <div className="flex-container">
