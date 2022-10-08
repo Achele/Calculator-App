@@ -1,5 +1,149 @@
-main {
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+button,
+body {
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --container-bg-color: black;
+  --td-bg-color: #7788;
+  --td-text-color: rgba(142, 132, 132, 0.8);
+  --screen-bg-color: white;
+  --screen-text-color: rgb(222, 248, 222);
+  --td-1st-bg-color: rgba(102, 112, 112, 0.9);
+  --td-side-bg-color: orange;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--container-bg-color);
+  width: 100%;
+  max-width: 15em;
+  height: auto;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 3em;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1em;
+  color: var(--screen-text-color);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.15);
+  padding-bottom: 16px;
+}
+
+.screen-container {
+  background: var(--screen-bg-color);
+  padding: 20px;
+  font-size: 40px;
+  color: black;
+  text-align: right;
+  border-radius: 5px;
+  box-shadow: inset 0 5px 8px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(102, 112, 112, 0.3);
+}
+
+.buttons {
+  /*  margin: 40px auto; */
+  /*   width: 100%; */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container > button {
+  width: 20%;
+  padding: 10px;
+  margin: 10px 5px;
+  border: 1px solid var(--container-bg-color);
+  background-color: var(--td-bg-color);
+  border-radius: 10px;
+  color: white;
+  /*   padding: 12px 20px; */
+  font-size: 18px;
+}
+
+#clear {
+  width: 100%;
+}
+
+button#zero {
+  width: 50%;
+}
+/* TRAIL */
+/* button {
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 2em;
+    margin: 0.3em;
+} */
+
+.flex-container > button:hover {
+  background: white;
+  color: var(--td-bg-color);
+  cursor: pointer;
+}
+
+.flex-container > button.orange:hover {
+  background: white;
+  color: orange;
+}
+
+/* .wrapper {
+    background-color: black;
+    border-radius: 1em;
+    padding: 1em;
+} */
+
+button.on {
+  background-color: var(--td-1st-bg-color);
+}
+
+button.orange {
+  background-color: var(--td-side-bg-color);
+}
+
+button.darkgray-btn {
+  background-color: var(--td-bg-color);
+}
+
+.attribution {
+  font-size: 11px;
   text-align: center;
-  vertical-align: center;
-  line-height: 100vh
+  color: dodgerblue;
+  border: 2px solid white;
+  margin-bottom: 0;
+}
+.attribution a {
+  color: black;
+  decoration: none;
+}
+
+.attribution a:hover {
+  color: steelblue;
 }
